@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin') // 将你定义过的其它规则复制并应用到 .vue 文件里相应语言的块
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 const config = {
@@ -49,7 +48,6 @@ const config = {
     new VueLoaderPlugin(),
     new webpack.NamedModulesPlugin(), // 和HotModuleReplacementPlugin搭配使用，以便更容易查看要修补的依赖
     new webpack.HotModuleReplacementPlugin(),
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
       filename: 'index.html',

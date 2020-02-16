@@ -12,6 +12,11 @@ const config = {
     filename: 'js/[hash:5].bundle.js',
     publicPath: './'
   },
+  stats: {
+    children: false,
+    entrypoints: false,
+    modules: false
+  },
   module: {
     rules: [
       {

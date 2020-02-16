@@ -2,12 +2,16 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin') // 将你定义过的其它规则复制并应用到 .vue 文件里相应语言的块
 
 const config = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: 'hello.min.js',
     libraryTarget: 'umd'
+  },
+  stats: {
+    entrypoints: false,
+    modules: false
   },
   module: {
     rules: [
