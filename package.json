@@ -1,5 +1,5 @@
 {
-  "name": "@luo/vue-component-hello",
+  "name": "@yanluo/vue-component-hello",
   "version": "0.0.1",
   "description": "the Vue UI component template",
   "main": "./lib/hello.min.js",
